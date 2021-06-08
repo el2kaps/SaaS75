@@ -1,34 +1,22 @@
-import {
-  Controller,
-  Get,
-  Post,
-  Body,
-  Patch,
-  Param,
-  Delete,
-} from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { KeywordsService } from './keywords.service';
 import { CreateKeywordDto } from './dto/create-keyword.dto';
 import { UpdateKeywordDto } from './dto/update-keyword.dto';
 
-//attach, keyword search (find all questions with that keyword)
 @Controller('keywords')
 export class KeywordsController {
   constructor(private readonly keywordsService: KeywordsService) {}
 
-  //params: body (keyword, quest_id)
-  @Post('attach')
-  attachkey(@Body() createKeywordDto: CreateKeywordDto) {
-    return this.keywordsService.attachkey(createKeywordDto);
+  @Post()
+  create(@Body() createKeywordDto: CreateKeywordDto) {
+    return this.keywordsService.create(createKeywordDto);
   }
 
-  //params in url: keyword
-  @Get('search/:keyword')
-  searchPerKey(@Param('keyword') keyword: string) {
-    return this.keywordsService.searchPerKey(keyword);
+  @Get('word')
+  findquestionwithkey(@Param('word') word: string) {
+    return this.keywordsService.findquestionwithkey(word);
   }
 
-  /*
   @Get()
   findAll() {
     return this.keywordsService.findAll();
@@ -47,5 +35,5 @@ export class KeywordsController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.keywordsService.remove(+id);
-  }*/
+  }
 }

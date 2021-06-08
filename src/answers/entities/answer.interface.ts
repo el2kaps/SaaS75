@@ -1,5 +1,5 @@
 //import { Question } from "../../questions/entities/question.entity";
-import { UserI } from '../../user/entities/user.interface';
+import { UserI } from '../../users/entities/user.interface';
 import { QuestionI } from '../../questions/entities/question.interface';
 
 export interface AnswerI {

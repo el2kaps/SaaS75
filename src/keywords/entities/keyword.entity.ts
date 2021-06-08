@@ -1,9 +1,9 @@
-import {Entity, JoinTable, ManyToMany, PrimaryColumn, PrimaryGeneratedColumn} from 'typeorm';
+import { Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { Question } from '../../questions/entities/question.entity';
 
 @Entity()
 export class Keyword {
-  @PrimaryColumn()
+  @PrimaryGeneratedColumn()
   keyword: string;
   @ManyToMany((type) => Question, { cascade: true })
   @JoinTable({
@@ -12,5 +12,4 @@ export class Keyword {
     inverseJoinColumn: { name: 'quest_id', referencedColumnName: 'Q_ID' },
   })
   questions: Question[];
-
 }
