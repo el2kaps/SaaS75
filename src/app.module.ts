@@ -1,15 +1,19 @@
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-//import { UsersModule } from './users/users.module';
-import { AuthModule } from './auth/auth.module';
-import { UsersModule } from './users/users.module';
-import { ConfigModule } from '@nestjs/config';
+import { QuestionsModule } from './questions/questions.module';
+import { AnswersModule } from './answers/answers.module';
+import { KeywordsModule } from './keywords/keywords.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({isGlobal: true}),TypeOrmModule.forRoot(), AuthModule, UsersModule
+    TypeOrmModule.forRoot(),
+    QuestionsModule,
+    AnswersModule,
+    KeywordsModule,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
