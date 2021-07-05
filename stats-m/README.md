@@ -1,1 +1,0 @@
-statistics component for microservices architecture
