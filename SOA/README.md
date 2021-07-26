@@ -1,4 +1,4 @@
 Το παρακάτω διάγραμμα αποτελεί μία πιο πρόχειρη σχεδίαση της αρχιτεκτονιής SOA του συστήματος όπως την υλοποιήσαμε η οποία όμως παρουσιάζει όλες τις λεπτομέρειες και τις αλληλεπιδράσεις των components. Τα αρχεία VPP στον φάκελο docmentation περιέχουν κι αυτά αντίστοιχο διάγραμμα.<br>
 
-file:///home/el2kaps/Downloads/Untitled%20Diagram%20(1).png![image](https://user-images.githubusercontent.com/63153771/127073526-42b39c19-40f3-4bf8-81e7-a2a57c005ccd.png)
+![image](https://user-images.githubusercontent.com/63153771/127073526-42b39c19-40f3-4bf8-81e7-a2a57c005ccd.png)
 
