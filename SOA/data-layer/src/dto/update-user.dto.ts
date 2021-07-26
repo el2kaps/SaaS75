@@ -1,0 +1,7 @@
+import { Observable } from 'rxjs';
+
+export class UpdateUserDto{
+  readonly name: string;
+  readonly email: string;
+  password: string;
+}
