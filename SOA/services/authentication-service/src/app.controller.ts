@@ -11,7 +11,8 @@ export class AppController {
   constructor(
     private readonly appService: AppService,
     private readonly rabbitMQService: RabbitMQService,
-  ) {}
+  ) {
+  }
 
   data_layer_url = 'http://localhost:3000';
 
@@ -25,13 +26,23 @@ export class AppController {
 
   @Post('register')
   async create(@Body() createdUserDto: CreateUserDto) {
-    try {
-      return axios.post('http://localhost:3000/users/register', {
+    console.log("Axios register")
+    return axios
+      .post('http://localhost:3000/users/register', createdUserDto)
+      .then((response) => {
+        console.log(response.data);
+        return response.data;
+      });
+    /*try {
+      const instance = axios.create();
+      const data = await instance.post('http://localhost:3000/users/register', {
         createdUserDto,
       });
-    } catch (err){
+      console.log(data);
+      return data;
+    } catch (err) {
       console.log(err);
-    }
+    }*/
   }
 
   @Post('login')
@@ -50,12 +61,11 @@ export class AppController {
     } catch (err) {
       console.log(err);
     }*/
-    try {
-      return axios.post('http://localhost:3000/users/login', {
-        loginUserDto,
+    return axios
+      .post('http://localhost:3000/users/login', loginUserDto)
+      .then((response) => {
+        console.log(response.data);
+        return response.data;
       });
-    } catch (err) {
-      console.log(err);
-    }
   }
 }
