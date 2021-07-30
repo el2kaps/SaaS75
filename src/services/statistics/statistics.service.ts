@@ -4,6 +4,7 @@ import { EntityManager, getRepository } from "typeorm";
 import { Answer } from "../../model/answer.entity";
 import { Question } from "../../model/question.entity";
 import { Keyword } from "../../model/keyword.entity";
+import { HasKeyword } from "../../model/has-keyword.entity";
 /*import { CreateStatisticDto } from './dto/create-statistic.dto';
 import { UpdateStatisticDto } from './dto/update-statistic.dto';
 */
@@ -53,14 +54,26 @@ export class StatisticsService {
     const TotalQuestionsPerDate = quest.count;
     return { TotalQuestionsPerDate };
   }
+  async countQuestionsLastWeek(){
+    const quest = await getRepository(Question)
+      .createQueryBuilder('question')
+      .select('count(question.Q_ID)', 'count')
+      .where('question.posted_date >= DATE_SUB(CURDATE(), INTERVAL 7 DAY)')
+      .getRawOne();
+    const TotalQuestionsLastWeek = quest.count;
+    return { TotalQuestionsLastWeek };
+  }
+
   async KeywordSearch(key: string) {
-    const search = await getRepository(Keyword)
+    const search = await getRepository(HasKeyword)
       .createQueryBuilder('Keyword')
+      .select("count(Keyword.keyword)", 'count')
       .where('Keyword.keyword = :key', {
         key: key,
-      });
-    const ret_search = await search.getMany();
-    return { ret_search };
+      })
+      .getRawOne();
+    const ret_search = search.count;
+    return { "Number of questions with given keyword:": ret_search };
   }
 
   async countMyPosts(id: number) {

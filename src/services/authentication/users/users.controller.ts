@@ -22,6 +22,9 @@ export class UsersController {
 
   @Post('register')
   create(@Body() createdUserDto: CreateUserDto): Observable<UserI> {
+    console.log("My input");
+    //console.log(createdUserDto["createdUserDto"]);
+    //createdUserDto = createdUserDto["createdUserDto"]
     return this.userService.create(createdUserDto);
   }
 

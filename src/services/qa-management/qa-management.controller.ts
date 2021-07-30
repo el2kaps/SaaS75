@@ -10,6 +10,7 @@ import { CreateHasKeywordDto } from "../../dto/create-has-keyword.dto";
 import { JwtService } from "@nestjs/jwt";
 import { Request, request } from "express";
 import { User } from "../../model/user.entity";
+import { stringify } from "ts-jest/dist/utils/json";
 //import { UpdateQaManagementDto } from './dto/update-qa-management.dto';
 
 @Controller()
@@ -64,6 +65,9 @@ export class QaManagementController {
 
   @Get('view_answers/:id')
   viewQuestionsAnsws(@Param('id') id: string){
+    console.log("ID is:");
+    console.log(id);
+    //id = id['id'];
     return this.qaManagementService.viewQuestionAnsws(+id);
   }
 /*
@@ -98,7 +102,7 @@ export class QaManagementController {
   //params in url: keyword
   @Get('keywords/search/:keyword')
   searchPerKey(@Param('keyword') keyword: string) {
+    //const key = stringify(request.query.keyword);
     return this.qaManagementService.searchPerKey(keyword);
   }
-
 }
