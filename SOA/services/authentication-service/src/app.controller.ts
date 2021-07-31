@@ -61,11 +61,36 @@ export class AppController {
     } catch (err) {
       console.log(err);
     }*/
-    return axios
-      .post('http://localhost:3000/users/login', loginUserDto)
-      .then((response) => {
-        console.log(response.data);
-        return response.data;
-      });
+    try {
+      return axios
+        .post('http://localhost:3000/users/login', loginUserDto)
+        .catch((err) => {
+          if (err.response.status === 404) {
+            //return "Possible user not found";
+            throw new Error(`${err.config.url} Possible user not found`);
+            //return "User not";
+          }
+          if (err.response.status === 401) {
+            //return "Possible user not found";
+            throw new Error(`Error 401: Possible user wrong credentials`);
+            //return "User not";
+          }
+          throw err;
+        })
+        .then((response) => {
+          console.log(response.data);
+          return response.data;
+        });
+    } catch (err){
+      console.log("Hello");
+      return err.response.data;
+    }
+  }
+  @Get("hello")
+  async getHello() {
+    await this.rabbitMQService.send('rabbit-mq-producer', {
+      message: this.appService.getHello(),
+    });
+    return 'Message sent to the queue!';
   }
 }

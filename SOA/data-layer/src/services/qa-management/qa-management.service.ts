@@ -45,6 +45,10 @@ export class QaManagementService {
     return this.manager.find(Answer);
   }
 
+  async allKeywords(): Promise<Keyword[]> {
+    return this.manager.find(Keyword);
+  }
+
   /*async viewQuestionAnsws(title: string): Promise<Answer[]> {
     const quest = await this.manager.find(Question, {
       where: { title: title },
