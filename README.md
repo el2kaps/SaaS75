@@ -1,7 +1,7 @@
 Project for Software as a Service <br>
 Undergraduate course, 8th semester 2020-2021, School of Electrical & Computer Engineering, NTUA <br>
 
-**ΑskMeAnything**
+**ΑskMeAnything**<br>
 Υλοποίηση μιας Q&A εφαρμογής με δύο αρχιετκτονικές: Service Oriented Architecture (SOA) και Microservices. <br>
 Μέλη Ομάδας:<br>
 Γεωργία Χριστοφίδη <br>
