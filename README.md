@@ -13,7 +13,9 @@ To master barnch περιέχει τους φακέλους:
 2) Microservices: όλη η υλοποίηση της Microservices αρχιτεκτονικής (microservices και για orchestrator χρησιμοποιήθηκε RabbitMQ/Redis)
 3) frontend: κοινό κια για τις δύο αρχιτεκτονικές
 4) documentation: UML diagrams (VPP files)
-5) Χρησιμοποιήθηκε το YouTrack για την οργάνωση του project και **UpSource ενδεικτικά για code review**
+5) data-control: create tables σε MySQL (δεν χρησιμοποιούνται στον κώδικα) και dummy data
+
+Χρησιμοποιήθηκε το YouTrack για την οργάνωση του project και **UpSource ενδεικτικά για code review**
 
 Στιγμιότυπα από την εφαρμογή: <br>
 1)Homepage εμφανίζει στατιστικά για την εφαρογή
