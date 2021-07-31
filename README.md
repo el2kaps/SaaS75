@@ -23,7 +23,7 @@ To master barnch περιέχει τους φακέλους:
 ![image](https://user-images.githubusercontent.com/63153771/127739057-9129bdda-49be-4811-b67d-9a876682b134.png)
 <br>
 3)View Answers
-![image](https://user-images.githubusercontent.com/63153771/127739069-b94a4528-2096-480f-9dc0-d7f3d83f7559.png)
+![image](https://user-images.githubusercontent.com/63153771/127739455-fb1a9092-4c37-4213-a118-9f9124077f38.png)
 <br>
 4)Create Question
 ![image](https://user-images.githubusercontent.com/63153771/127739090-13f685bf-54b3-4b45-a32d-6bae5a7a1fa5.png)
