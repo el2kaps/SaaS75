@@ -11,7 +11,7 @@ Undergraduate course, 8th semester 2020-2021, School of Electrical & Computer En
 To master barnch περιέχει τους φακέλους:
 1) SOA:όλη η υλοποίηση της SOA αρχιτεκτονικής (data-layer, services και για esb χρησιμοποιήθηκε https://www.cloudamqp.com/ )
 2) Microservices: όλη η υλοποίηση της Microservices αρχιτεκτονικής (microservices και για orchestrator χρησιμοποιήθηκε RabbitMQ/Redis)
-3) frontend: κοινό κια για τις δύο αρχιτεκτονικές
+3) frontend: κοινό και για τις δύο αρχιτεκτονικές
 4) documentation: UML diagrams (VPP files)
 5) data-control: create tables σε MySQL (δεν χρησιμοποιούνται στον κώδικα) και dummy data
 
