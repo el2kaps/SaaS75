@@ -9,3 +9,6 @@
 5) user-managemnet service: port 3004
 6) homepage-managemet service: port 3005
 7) ESB: υλοποιήθηκε με RabbitMQ  (https://www.cloudamqp.com/)
+
+Deployment Diagram <br>
+![image](https://user-images.githubusercontent.com/63153771/127749705-5cfff830-0036-4c61-b5b9-b82de89ece2f.png)
