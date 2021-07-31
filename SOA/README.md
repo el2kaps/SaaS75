@@ -1,6 +1,5 @@
 Το παρακάτω διάγραμμα αποτελεί μία πιο πρόχειρη σχεδίαση (οι πλήρεις αλληλεπιδράσεις services-esb φαίνονται στο VPP αρχείο) της αρχιτεκτονιής SOA του συστήματος όπως την υλοποιήσαμε η οποία όμως παρουσιάζει όλες τις λεπτομέρειες και τις αλληλεπιδράσεις των components. Τα αρχεία VPP στον φάκελο docmentation περιέχουν κι αυτά αντίστοιχο διάγραμμα.<br>
-
-![image](https://user-images.githubusercontent.com/63153771/127073526-42b39c19-40f3-4bf8-81e7-a2a57c005ccd.png)
+![Untitled Diagram (12)](https://user-images.githubusercontent.com/63153771/127747754-ec739d16-c72a-4f6b-940d-2cd9cbe4f4ce.png)
 <br>
 Εκτέλεση σε localhost : <br>
 1) data-layer: port 3000
