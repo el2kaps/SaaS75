@@ -1,7 +1,7 @@
-Project for Software as a Service <br>
+### Project for Software as a Service <br>
 Undergraduate course, 8th semester 2020-2021, School of Electrical & Computer Engineering, NTUA
 
-**ΑskMeAnything** <br>
+## ΑskMeAnything
 Implementation of a Q&A web application in two architectures: Service Oriented Architecture (SOA) και Microservices.
 
 Master barnch contains the folders below:
