@@ -4,6 +4,11 @@ Undergraduate course, 8th semester 2020-2021, School of Electrical & Computer En
 ## ΑskMeAnything
 Implementation of a Q&A web application in two architectures: Service Oriented Architecture (SOA) και Microservices.
 
+https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+https://img.shields.io/badge/rabbitmq-%23FF6600.svg?&style=for-the-badge&logo=rabbitmq&logoColor=white
+https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white
+
 Master barnch contains the folders below:
 
 1. SOA: implementation of SOA architecture (data-layer, services, for esb used: https://www.cloudamqp.com/ )
